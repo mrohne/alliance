@@ -33,7 +33,7 @@ double elpVoltage[elpVOLTNUM]                                              ;
 double elpCapa[elpTRANSNUM][elpCAPANUM]                                    ;
 double elpGeneral[elpGENERALNUM]           = {0.0,0.0,1000.0}              ;
 char   elpLang                             = elpDEFLANG                    ;
-int    elpyylineno                                                            ;
+extern int    elpyylineno                                                  ;
 
 /*****************************************************************************/
 /*                        function elpenv()                                  */
