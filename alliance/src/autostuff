@@ -193,7 +193,7 @@ dnl
 dnl Check for X toolkit libraries
 dnl
 XT_LIBS=""
-AC_CHECK_LIB(Xt, XtToolkitInitialize, XT_LIBS="-lXt",,
+AC_CHECK_LIB(Xt, XtToolkitInitialize, XT_LIBS="-lXt.6",,
 	${X_PRE_LIBS} ${X11_LIBS} ${X_EXTRA_LIBS})
 if test "$XT_LIBS" = ""; then
 dnl Not having Xt is fatal.  Let the user fix this.
@@ -335,7 +335,7 @@ echo "])"                                    >> configure.in
 
 
 aclocal -I .
-libtoolize --force --copy --automake
+glibtoolize --force --copy --automake
 automake --foreign --add-missing --copy
 autoconf
 
